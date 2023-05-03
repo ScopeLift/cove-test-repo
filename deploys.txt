@@ -1,0 +1,42 @@
+== Logs ==
+  FOUNDRY_PROFILE: default
+  CounterBasic             create     0x7737645152cb5A791691Aa9F5699eBEec2489b3a
+  CounterWithImmutables    create     0x952D74A27a52f054Eb5dd81022D93e3300C3Da9e
+  CounterBasic             create2    0x8c01823430e8182Ced02cE549C1E0c38Cf2B1Ec3
+  CounterWithImmutables    create2    0x74bf64c74dAdF3940F9679E64746B4a1B404824b
+== Logs ==
+  FOUNDRY_PROFILE: no_optimizer_no_metadata
+  CounterBasic             create     0x7737645152cb5A791691Aa9F5699eBEec2489b3a
+  CounterWithImmutables    create     0x952D74A27a52f054Eb5dd81022D93e3300C3Da9e
+  CounterBasic             create2    0xeF1B513742c5A8129C8F8F0D69d8d16743E6612c
+  CounterWithImmutables    create2    0xC00DDCA6dC56542B6A12bb023b2a4d30Dd73c58c
+== Logs ==
+  FOUNDRY_PROFILE: yes_optimizer_no_metadata
+  CounterBasic             create     0x7737645152cb5A791691Aa9F5699eBEec2489b3a
+  CounterWithImmutables    create     0x952D74A27a52f054Eb5dd81022D93e3300C3Da9e
+  CounterBasic             create2    0xE0128A75D6B9306bCdae38eD27956394F27C4e75
+  CounterWithImmutables    create2    0x90FA1561Bb01FC2c60f82786Bf10Ecb1ef85d8d9
+== Logs ==
+  FOUNDRY_PROFILE: no_via_ir_no_metadata
+  CounterBasic             create     0x7737645152cb5A791691Aa9F5699eBEec2489b3a
+  CounterWithImmutables    create     0x952D74A27a52f054Eb5dd81022D93e3300C3Da9e
+  CounterBasic             create2    0x73a43c10e3B8B31FAae7bad82873E292000eeB5a
+  CounterWithImmutables    create2    0xC15F3A6e3FA381fEeBCA10b40342d20689b4a40a
+== Logs ==
+  FOUNDRY_PROFILE: yes_via_ir_no_metadata
+  CounterBasic             create     0x7737645152cb5A791691Aa9F5699eBEec2489b3a
+  CounterWithImmutables    create     0x952D74A27a52f054Eb5dd81022D93e3300C3Da9e
+  CounterBasic             create2    0xAd5523Fd7f4cbe8dd304146df7da30795e97994A
+  CounterWithImmutables    create2    0x5Ed775339ED21DFBD25F7A6d5FC5AB0E135199bd
+== Logs ==
+  FOUNDRY_PROFILE: no_metadata_no_cbor
+  CounterBasic             create     0x7737645152cb5A791691Aa9F5699eBEec2489b3a
+  CounterWithImmutables    create     0x952D74A27a52f054Eb5dd81022D93e3300C3Da9e
+  CounterBasic             create2    0x6EDF04b2C90E149144f47DF81D116236b2F8f28c
+  CounterWithImmutables    create2    0xD61F1Fc150d516E482596782E28AF2cD0f0B5749
+== Logs ==
+  FOUNDRY_PROFILE: no_metadata_yes_cbor
+  CounterBasic             create     0x7737645152cb5A791691Aa9F5699eBEec2489b3a
+  CounterWithImmutables    create     0x952D74A27a52f054Eb5dd81022D93e3300C3Da9e
+  CounterBasic             create2    0xB077A78Ad98291046f7abF15562793F2A00c90F7
+  CounterWithImmutables    create2    0xF1f50D7235035F6E645B5B07b94645C7fAf09ba4
