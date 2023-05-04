@@ -12,15 +12,23 @@
   optimizer = true
   out = "out_yes_optimizer_no_metadata"
 
+[profile.yes_optimizer_yes_metadata]
+  optimizer = true
+  out = "out_yes_optimizer_yes_metadata"
+
 [profile.no_via_ir_no_metadata]
   bytecode_hash = "none"
-  via_ir = false
   out = "out_no_via_ir_no_metadata"
+  via_ir = false
 
 [profile.yes_via_ir_no_metadata]
   bytecode_hash = "none"
-  via_ir = true
   out = "out_yes_via_ir_no_metadata"
+  via_ir = true
+
+[profile.yes_via_ir_yes_metadata]
+  out = "out_yes_via_ir_yes_metadata"
+  via_ir = true
 
 [profile.no_metadata_no_cbor]
   bytecode_hash = "none"

@@ -31,10 +31,12 @@ contract DeployCounters is Script {
     if (isEqual(profileName, "default")) return 10;
     else if (isEqual(profileName, "no_optimizer_no_metadata")) return 20;
     else if (isEqual(profileName, "yes_optimizer_no_metadata")) return 30;
-    else if (isEqual(profileName, "no_via_ir_no_metadata")) return 40;
-    else if (isEqual(profileName, "yes_via_ir_no_metadata")) return 50;
-    else if (isEqual(profileName, "no_metadata_no_cbor")) return 60;
-    else if (isEqual(profileName, "no_metadata_yes_cbor")) return 70;
+    else if (isEqual(profileName, "yes_optimizer_yes_metadata")) return 40;
+    else if (isEqual(profileName, "no_via_ir_no_metadata")) return 50;
+    else if (isEqual(profileName, "yes_via_ir_no_metadata")) return 60;
+    else if (isEqual(profileName, "yes_via_ir_yes_metadata")) return 70;
+    else if (isEqual(profileName, "no_metadata_no_cbor")) return 80;
+    else if (isEqual(profileName, "no_metadata_yes_cbor")) return 90;
     revert("unknown profile");
   }
 
