@@ -20,8 +20,10 @@ __deploy flags='':
         "default"
         "no_optimizer_no_metadata"
         "yes_optimizer_no_metadata"
+        "yes_optimizer_yes_metadata"
         "no_via_ir_no_metadata"
         "yes_via_ir_no_metadata"
+        "yes_via_ir_yes_metadata"
         "no_metadata_no_cbor"
         "no_metadata_yes_cbor"
     )
