@@ -1,9 +1,16 @@
 set dotenv-load
 
-# Run `just deploy` for a dry run, or `just deploy '--rpc-url $RPC_URL --broadcast'` for the live deploy.
+# After configuring your `.env` file, run `just deploy` for a dry run, or `just deploy '--broadcast'` for the live deploy.
 deploy flags='':
-  # Save deploy addresses to `deploys.txt`
-  just __deploy | grep -E '^(== Logs ==|  FOUNDRY_PROFILE|  CounterBasic|  CounterWithImmutables)' | sed -E 's/(Estimated .*|Script ran successfully\.|SIMULATION COMPLETE.*|Transactions saved.*)//g' > deploys.txt
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    echo "COMMIT HASH: $(git rev-parse HEAD)" >> deploys.txt
+
+    # Save deploy addresses to `deploys.txt`
+    just __deploy | grep -E '^(== Logs ==|  COMMIT HASH|  FOUNDRY_PROFILE|  CHAIN ID|  CHAIN NAME|  CounterBasic|  CounterWithImmutables)' >> deploys.txt
+
+    echo "" >> deploys.txt
 
 __deploy flags='':
     #!/usr/bin/env bash
@@ -25,6 +32,7 @@ __deploy flags='':
             forge script script/DeployCounters.s.sol \
             --skip test \
             -vvv \
+            --rpc-url $RPC_URL \
             --private-key $DEPLOYER_PRIVATE_KEY \
             {{flags}}
     done
