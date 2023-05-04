@@ -19,8 +19,8 @@ contract DeployCounters is Script {
     console2.log("CHAIN ID:        %d", block.chainid);
     console2.log("CHAIN NAME:      %s", getChain(block.chainid).name);
     console2.log("CounterBasic             create     %s", address(counterBasic1));
-    console2.log("CounterWithImmutables    create     %s", address(counterWithImmutables1));
     console2.log("CounterBasic             create2    %s", address(counterBasic2));
+    console2.log("CounterWithImmutables    create     %s", address(counterWithImmutables1));
     console2.log("CounterWithImmutables    create2    %s", address(counterWithImmutables2));
   }
 
