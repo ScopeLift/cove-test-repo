@@ -2,15 +2,15 @@
 pragma solidity ^0.8.13;
 
 contract CounterWithImmutables {
-  uint256 public immutable scaleFactor;
+  uint256 public immutable SCALE_FACTOR;
   uint256 public number;
 
   constructor(uint256 _scaleFactor) {
-    scaleFactor = _scaleFactor;
+    SCALE_FACTOR = _scaleFactor;
   }
 
   function setNumber(uint256 newNumber) public {
-    number = newNumber * scaleFactor;
+    number = newNumber * SCALE_FACTOR;
   }
 
   function increment() public {
