@@ -8,7 +8,7 @@ deploy flags='':
     echo "COMMIT HASH: $(git rev-parse HEAD)" >> deploys.txt
 
     # Save deploy addresses to `deploys.txt`
-    just __deploy | grep -E '^(== Logs ==|  COMMIT HASH|  FOUNDRY_PROFILE|  CHAIN ID|  CHAIN NAME|  CounterBasic|  CounterWithImmutables)' >> deploys.txt
+    just __deploy '{{flags}}' | grep -E '^(== Logs ==|  COMMIT HASH|  FOUNDRY_PROFILE|  CHAIN ID|  CHAIN NAME|  CounterBasic|  CounterWithImmutables)' >> deploys.txt
 
     echo "" >> deploys.txt
 
