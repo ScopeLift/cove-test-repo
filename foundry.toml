@@ -1,18 +1,43 @@
 [profile.default]
-  optimizer = true
-  optimizer_runs = 10_000_000
-  solc_version = "0.8.16"
+  solc_version = "0.8.19"
   verbosity = 3
 
-[profile.ci]
-  fuzz = { runs = 5000 }
-  invariant = { runs = 1000 }
-
-[profile.lite]
-  fuzz = { runs = 50 }
-  invariant = { runs = 10 }
-  # Speed up compilation and tests during development.
+[profile.no_optimizer_no_metadata]
+  bytecode_hash = "none"
   optimizer = false
+  out = "out_no_optimizer_no_metadata"
+
+[profile.yes_optimizer_no_metadata]
+  bytecode_hash = "none"
+  optimizer = true
+  out = "out_yes_optimizer_no_metadata"
+
+[profile.yes_optimizer_yes_metadata]
+  optimizer = true
+  out = "out_yes_optimizer_yes_metadata"
+
+[profile.no_via_ir_no_metadata]
+  bytecode_hash = "none"
+  out = "out_no_via_ir_no_metadata"
+  via_ir = false
+
+[profile.yes_via_ir_no_metadata]
+  bytecode_hash = "none"
+  out = "out_yes_via_ir_no_metadata"
+  via_ir = true
+
+[profile.yes_via_ir_yes_metadata]
+  out = "out_yes_via_ir_yes_metadata"
+  via_ir = true
+
+[profile.no_metadata_no_cbor]
+  bytecode_hash = "none"
+  cbor_metadata = false
+  out = "out_no_metadata_no_cbor"
+
+[profile.no_metadata_yes_cbor]
+  bytecode_hash = "none"
+  out = "out_no_metadata_yes_cbor"
 
 [fmt]
   bracket_spacing = false
